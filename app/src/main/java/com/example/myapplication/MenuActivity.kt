@@ -5,7 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import java.util.*
 
-class SecondActivity : AppCompatActivity() {
+class MenuActivity : AppCompatActivity() {
 
     companion object {
 
@@ -14,7 +14,7 @@ class SecondActivity : AppCompatActivity() {
     }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_second)
+        setContentView(R.layout.activity_menu)
         showRandomNumber()
     }
     fun showRandomNumber() {
