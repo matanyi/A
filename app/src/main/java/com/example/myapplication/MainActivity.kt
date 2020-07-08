@@ -10,7 +10,9 @@ import android.util.Log
 import com.example.schoolscientistsexample.ServerCommand
 
 class MainActivity : AppCompatActivity() {
+
     var t = ServerCommand()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -20,5 +22,14 @@ class MainActivity : AppCompatActivity() {
     }
     fun ledOff(view: View){
         t.ledOff()
+    }
+
+    fun infoMe(view: View){
+        val infoIntent = Intent(this, InfoActivity::class.java)
+        startActivity(infoIntent)
+    }
+    fun controlMe(view: View){
+        val controlIntent = Intent(this, CabinetListDirectorActivity::class.java)
+        startActivity(controlIntent)
     }
 }
