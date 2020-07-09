@@ -25,8 +25,8 @@ class ServerCommand{
     }
     fun lockStatus() {
         GlobalScope.launch(Dispatchers.IO) {
-            val data = client.get<String>("https://ms0.newtonbox.ru/get/house/device1/lock/status")
-            Log.i("https://ms0.newtonbox.ru/get/school/device1/lock/status Simple case", data)
+            val data = client.get<String>("https://ms4.newtonbox.ru/lock/1/status")
+            Log.i("https://ms4.newtonbox.ru/lock/1/status Simple case", data)
         }
     }
     fun deviceList() {
