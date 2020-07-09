@@ -1,5 +1,6 @@
 package com.example.myapplication
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -18,5 +19,9 @@ class CabinetListDirectorActivity : AppCompatActivity() {
     }
     fun lockClose(view: View){
         t.lockClose()
+    }
+    fun toMenu(view: View){
+        val controlIntent = Intent(this, MainActivity::class.java)
+        startActivity(controlIntent)
     }
 }

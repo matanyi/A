@@ -17,12 +17,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
     }
-    fun ledOn(view: View){
-        t.ledOn()
-    }
-    fun ledOff(view: View){
-        t.ledOff()
-    }
 
     fun infoMe(view: View){
         val infoIntent = Intent(this, InfoActivity::class.java)

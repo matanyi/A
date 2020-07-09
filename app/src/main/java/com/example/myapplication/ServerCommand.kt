@@ -11,30 +11,16 @@ class ServerCommand{
 
     private val client = HttpClient()
 
-    fun ledOn() {
-        GlobalScope.launch(Dispatchers.IO) {
-            val data = client.get<String>("https://ms0.newtonbox.ru/set/house/device1/led/on")
-            Log.i("https://ms0.newtonbox.ru/set/house/device1/led/on Simple case", data)
-        }
-    }
-
-    fun ledOff() {
-        GlobalScope.launch(Dispatchers.IO) {
-            val data = client.get<String>("https://ms0.newtonbox.ru/set/house/device1/led/off")
-            Log.i("https://ms0.newtonbox.ru/set/house/device1/led/off Simple case", data)
-        }
-    }
-
     fun lockOpen() {
         GlobalScope.launch(Dispatchers.IO) {
-            val data = client.get<String>("https://ms0.newtonbox.ru/set/school/device1/lock/open")
-            Log.i("https://ms0.newtonbox.ru/set/school/device1/lock/open Simple case", data)
+            val data = client.get<String>("https://ms4.newtonbox.ru/lock/1/open")
+            Log.i("https://ms4.newtonbox.ru/lock/1/open Simple case", data)
         }
     }
     fun lockClose() {
         GlobalScope.launch(Dispatchers.IO) {
-            val data = client.get<String>("https://ms0.newtonbox.ru/set/school/device1/lock/close")
-            Log.i("https://ms0.newtonbox.ru/set/school/device1/lock/close Simple case", data)
+            val data = client.get<String>("https://ms4.newtonbox.ru/lock/1/close")
+            Log.i("https://ms4.newtonbox.ru/lock/1/close Simple case", data)
         }
     }
     fun lockStatus() {
