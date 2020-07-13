@@ -6,16 +6,28 @@ import io.ktor.client.request.get
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
+import io.ktor.client.features.logging.DEFAULT
+import io.ktor.client.features.logging.LogLevel
+import io.ktor.client.features.logging.Logger
+import io.ktor.client.features.logging.Logging
+
 
 class ServerCommand{
 
-    private val client = HttpClient()
+    private val client = HttpClient() {
+        install(Logging) {
+            logger = Logger.DEFAULT
+            level = LogLevel.ALL
+        }
+    }
+
 
     fun lockOpen() {
         GlobalScope.launch(Dispatchers.IO) {
             val data = client.get<String>("https://ms4.newtonbox.ru/lock/1/open")
             Log.i("https://ms4.newtonbox.ru/lock/1/open Simple case", data)
         }
+
     }
     fun lockClose() {
         GlobalScope.launch(Dispatchers.IO) {
