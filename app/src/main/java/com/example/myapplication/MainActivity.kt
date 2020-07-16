@@ -20,4 +20,8 @@ class MainActivity : AppCompatActivity() {
         val controlIntent = Intent(this, CabinetListDirectorActivity::class.java)
         startActivity(controlIntent)
     }
+    fun cardMe(view: View){
+        val cardMe = Intent(this, SetCardActivity::class.java)
+        startActivity(cardMe)
+    }
 }
