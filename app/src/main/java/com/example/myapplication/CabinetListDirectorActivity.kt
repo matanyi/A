@@ -40,6 +40,14 @@ class CabinetListDirectorActivity : AppCompatActivity() {
         butt_cl2.text = "Закрыто"
         butt_op2.text = "Открыть"
     }
+    fun Log101(view: View){
+        val logIntent = Intent(this, LogAttend101Activity::class.java)
+        startActivity(logIntent)
+    }
+    fun Log102(view: View){
+        val logIntent = Intent(this, LogAttend102Activity::class.java)
+        startActivity(logIntent)
+    }
     fun toMenu(view: View){
         val controlIntent = Intent(this, MainActivity::class.java)
         startActivity(controlIntent)
