@@ -15,7 +15,7 @@
         <activity android:name=".LogAttend102Activity" />
         <activity android:name=".CabinetListTeacher" />
         <activity android:name=".CabinetSetActivty" />
-        <activity android:name=".LogAttend101Activity" />
+        <activity android:name=".LogAttendActivity" />
         <activity android:name=".CabinetListDirectorActivity" />
         <activity android:name=".SetCardActivity" />
         <activity android:name=".MenuActivity" />
